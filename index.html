@@ -3,67 +3,73 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, intial-scale=1.0">
-        <title>Hareta Leila's Cafe</title>
-        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
     </head>
+    <header class="header">
+    <h1 id="title">Nderi's codecamp Survey Form</h1>
+    </header>
+    <p id="description" class="text-center">Thank you for sparing us some of your time</p>
     <body>
-        <div class="Leila">
-            <main>
-                <h1>VOKEZ CAFE</h1>
-                <p class="comic">HAMKAI SANA!?!</p>
-                <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
-<lord-icon
-    src="https://cdn.lordicon.com/ksfmqvvu.json"
-    trigger="hover"
-    colors="outline:#121331,primary:#ebe6ef,secondary:#b26836"
-    style="width:250px;height:250px">
-</lord-icon>
-                <section>
-                    <h2>Coffee</h2>
-                    <img src="images/icons8-coffee-64.png">
-                    <p class="fort">It's sure to kickstart your day</p>
-                    <article class="order">
-                        <p class="flavor">Latte</p><p class="price">sh150</p>
-                    </article>
-                    <article class="order">
-                        <p class="flavor">Cappuccino</p><p class="price">sh250</p>
-                    </article>
-                    <article class="order">
-                        <p class="flavor">Mocha</p><p class="price">sh260</p>
-                    </article>
-                    <article class="order">
-                        <p class="flavor">Espresso</p><p class="price">sh100</p>
-                    </article>
-                    <article class="order">
-                        <p class="flavor">Decaf</p><p class="price">sh400</p>
-                    </article>
-                </section>
-                <section>
-                    <h2>Dessert</h2>
-                    <img src="images/icons8-dessert-48.png">
-                    <article class="order">
-                        <p class="dessert">Muffin</p><p class="price">sh250</p>
-                    </article>
-                    <article class="order">
-                        <p class="dessert">Cheesecake</p><p class="price">sh200</p>
-                    </article>
-                    <article class="order">
-                        <p class="dessert">Cookies</p><p class="price">sh50</p>
-                    </article>
-                    <article class="order">
-                        <p class="dessert">Donut</p><p class="price">sh40</p>
-                    </article>
-                    <article class="order">
-                        <p class="dessert">Brownies</p><p class="price">sh300</p>
-                    </article>
-                </section>
-            </main>
-            <footer>
-                <p>
-                    <a href="https://Nderi's codecamp.org">Come back again</a></p>
-                    <p class="address">People always leave without saying byee.  MILABO!!!</p>
-            </footer>
+    <form id="survey-form">
+        <div class="form-group">
+            <label for="name" id="name-label">Name <input required id="name" type="text" name="name" class="form-control" placeholder="Enter your name"></input></label></div>
+        <div class="form-group">    
+            <label for="email" id="email-label">Email <input required id="email" type="email" name="email" class="form-control" placeholder="Enter your email"></input></label></div>
+        <div class="form-group">    
+            <label for="age" id="number-label">Age (optional) <input required id="number" type="number" min="10" max="99" name="age" class="form-control" placeholder="Age"></input></label></div>
+        <div class="form-group">    
+            <label for="dropdown">Which best describes your current role?
+                <select id="dropdown" name="role" class="form-control" required>
+                    <option disabled selected value>Select current role</option>
+                    <option value="student">Student</option>
+                    <option value="job">Full time job</option>
+                    <option value="learner">Full time learner</option>
+                    <option value="preferNo">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </label></div>
+        <div class="form-group">
+            <p>Would you freecodecamp to a friend</p>
+            <label><input name="user-reccomend" value="definitely" type="radio" class="input-radio" checked></input>Definitely</label>
         </div>
+        <div class="form-group">
+            <label><input name="user-reccomend" value="maybe" type="radio" class="input-radio"></input>Maybe</label>
+        </div>
+        <div class="form-group">
+            <label><input name="user-reccomend" value="not sure" type="radio" class="input-radio"></input>Not sure</label>
+        </div>
+        <div class="form-group">
+            <label for="dropdown">What is your favourite feature of freecodecamp?
+                <select id="mostlike" name="mostlike" class="form-control" required>
+                    <option disabled selected value>Select an option</option>
+                    <option value="challenges">challenges</option>
+                    <option value="projects">Projects</option>
+                    <option value="community">Community</option>
+                    <option value="open source">Open Source</option>
+                </select>
+            </label>
+        </div>
+        <div class="form-group">
+            <p>What would you like to see improved? <span class="clue"> (Check that all apply)</span></p>
+            <label><input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox"></input>Front-end-projects</label>
+            <label><input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox"></input>Back-end-projects</label>
+            <label><input name="prefer" value="data visualization" type="checkbox" class="input-checkbox"></input>Data Visualization</label>
+            <label><input name="prefer" value="challenges" type="checkbox" class="input-checkbox"></input>Challenges</label>
+            <label><input name="prefer" value="open source community" type="checkbox" class="input-checkbox"></input>Open Source Community</label>
+            <label><input name="prefer" value="gitter help rooms" type="checkbox" class="input-checkbox"></input>Gitter  Help Rooms</label>
+            <label><input name="prefer" value="videos" type="checkbox" class="input-checkbox"></input>Videos</label>
+            <label><input name="prefer" value="city meetups" type="checkbox" class="input-checkbox"></input>City Meetups</label>
+            <label><input name="prefer" value="wiki" type="checkbox" class="input-checkbox"></input>Wiki</label>
+            <label><input name="prefer" value="forum" type="checkbox" class="input-checkbox"></input>Forum</label>
+            <label><input name="prefer" value="additional courses" type="checkbox" class="input-checkbox"></ihput>Additional Courses</label>    
+        </div> 
+        <div class="form-group">
+            <p>Any comments or suggestions?</p>
+            <textarea id="comments" class="ihput-text-area" name="comments" placeholder="Enter your comments here..." rows="6" cols="76"></textarea>
+        </div>
+        <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">Submit</button>
+    </form>
     </body>
 </html>
